@@ -201,7 +201,7 @@ class PageStandard extends Page
 			$this->ajouteLigne("<label for=\"password\">" .
 				$this->convertiTexte("Mot de passe") .
 				"</label>");
-			$this->ajouteLigne("<input type='password' name='password' placeholder=\"mot de passe\" required /> <br />");
+			$this->ajouteLigne("<input type=\"password\" id=\"password\" name=\"password\" placeholder=\"mot de passe\" required /> <br />");
 			$this->fermeBloc("</li>");
 			$this->ouvreBloc("<li>");
 			$this->ajouteLigne("<label for=\"autologin\">" .

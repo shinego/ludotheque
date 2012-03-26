@@ -8,6 +8,7 @@
 require_once("classes/Page.classe.php");
 require_once("classes/ModuleProfil.classe.php");
 require_once("classes/ModuleGroupes.classe.php");
+require_once("classes/ModuleRecherche.classe.php");
 
 // Constantes
 
@@ -84,6 +85,10 @@ class PageModule extends Page
                                     }
                                     
                                     break;
+                                case "Recherche" :
+                                // On créé l'objet chargé de gerer le module Recherche
+                                $this->unModule = new ModuleRecherche();
+                                break;
 			}
 		}
 		else
@@ -125,6 +130,7 @@ class PageModule extends Page
 		$this->ouvreBloc("<nav id=\"menuModules\">");
 		$this->ouvreBloc("<ol>");
 		$this->ajouteLigne("<li><a href=\"" . MODULE_PROFIL ."\">Mon profil</a></li>");
+		$this->ajouteLigne("<li><a href=\"" . MODULE_RECHERCHE . "\"> Gestion Recherche</a></li>");
 		$this->ajouteLigne("<li><a href=\"\">Utilisateurs</a></li>");
                 // Si l'utilisateur à accès au module Groupes
                 if ($this->monUtilisateur->accesGroupes())
