@@ -104,11 +104,51 @@ class ModuleRecherche extends Module
 		$this->ajouteLigne("<label for=\"lieu\">" . $this->convertiTexte("Lieu") . "</label>");
 		$this->creationSelect($etat,"recherche[idLieu]");
 		$this->fermeBloc("</div>");
+		
+		//Prix
+		$this->ouvreBloc("<div class='champ_recherche'>");
+		$this->ajouteLigne("<label for=\"prix\">" . $this->convertiTexte("Prix:") . "</label>");
+		//$this->ajouteLigne("<input type=\"text\" id=\"prix\" name=\"recherche[prix]\" />");
+		$this->ajouteLigne("<label for=\"prixMin\">" . $this->convertiTexte("Min") . "</label>");
+		$this->ajouteLigne("<input type=\"text\" id=\"prixMin\" name=\"recherche[prixMin]\" />");
+		$this->ajouteLigne("<label for=\"prixMax\">" . $this->convertiTexte("Max") . "</label>");
+		$this->ajouteLigne("<input type=\"text\" id=\"prixMax\" name=\"recherche[prixMax]\" />");
+		$this->fermeBloc("</div>");
+		$this->fermeBloc("</fieldset>");
+		
+		//Recherche avancée
+		$this->ouvreBloc("<fieldset>");
+		$this->ajouteLigne("<legend>Recherche avancée</legend>");
+		
+		//Auteur
+		$this->ouvreBloc("<div class='champ_recherche'>");
+		$this->ajouteLigne("<label for=\"auteur\">" . $this->convertiTexte("Auteur") . "</label>");
+		$this->ajouteLigne("<input type=\"text\" id=\"auteur\" name=\"recherche[auteur]\" />");
+		$this->fermeBloc("</div>");
+		
+		//Illustrateur
+		$this->ouvreBloc("<div class='champ_recherche'>");
+		$this->ajouteLigne("<label for=\"illustrateur\">" . $this->convertiTexte("Illustrateur") . "</label>");
+		$this->ajouteLigne("<input type=\"text\" id=\"illustrateur\" name=\"recherche[illustrateur]\" />");
+		$this->fermeBloc("</div>");
+		
+		//Année
+		$this->ouvreBloc("<div class='champ_recherche'>");
+		$this->ajouteLigne("<label for=\"annee\">" . $this->convertiTexte("Année") . "</label>");
+		$this->ajouteLigne("<input type=\"text\" id=\"annee\" name=\"recherche[annee]\" />");
+		$this->fermeBloc("</div>");
+		
+		//Distributeur
+		$this->ouvreBloc("<div class='champ_recherche'>");
+		$this->ajouteLigne("<label for=\"distributeur\">" . $this->convertiTexte("Distributeur") . "</label>");
+		$this->ajouteLigne("<input type=\"text\" id=\"distributeur\" name=\"recherche[distributeur]\" />");
+		$this->fermeBloc("</div>");
 
 		$this->ajouteLigne("<input type='submit' />");
 		var_dump($_POST['recherche']);
 		$this->fermeBloc("</fieldset>");
-		$this->fermeBloc("</form>");
+		$this->fermeBloc("</form>");		
+		
 	}
 	
 	/** Fonction qui crée des listes HTML <select>
