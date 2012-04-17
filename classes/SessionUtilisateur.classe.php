@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
 * Classe de la session PHP et des paramètres d'un utilisateur
 *

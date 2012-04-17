@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
 * Classe du module "Mon Profil"
 * Permet le module de gestion du profil d'un utilisateur

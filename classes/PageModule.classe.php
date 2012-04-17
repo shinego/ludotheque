@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Cette classe permet de créer les pages web interne au format MDJT
  * Partie privée avec affichage des modules 
