@@ -195,17 +195,13 @@ class ModuleRecherche extends Module
 				$this->ajouteLigne("nom version :" . $row["nomVersion"]);
 				$this->ajouteLigne("id version :" . $row["idVersion"]);
 				$this->ajouteLigne("nbexamplaire:" . $row["nbExemplaire"]);
-			}
-				
-
-				
+			}				
 		}
 	}
 
 	/**
 	 * Fonction qui crée des listes HTML <select>
 	 * @param array tableau 2 colonnes, la première étant la value, deuxième le nom
-	 * @param string nom du tableau POST
 	 * @param string nom de la ligne du tableau
 	 */
 

@@ -8,7 +8,12 @@
 require_once("classes/Page.classe.php");
 require_once("classes/ModuleProfil.classe.php");
 require_once("classes/ModuleGroupes.classe.php");
+
 require_once("classes/ModuleRecherche.classe.php");
+require_once("classes/ModuleEmprunter.classe.php");
+require_once("classes/ModuleRetour.classe.php");
+require_once("classes/ModuleEmprunt.classe.php");
+require_once("classes/ModuleGestionEmprunt.classe.php");
 
 // Constantes
 
@@ -89,6 +94,21 @@ class PageModule extends Page
 				// On créé l'objet chargé de faire des recherches. Ceci est une page de test.
 				$this->unModule = new ModuleRecherche();
 				break;
+				case "Emprunter" :				
+				$this->unModule = new ModuleEmprunter();
+				break;
+				
+				case "Retour" :				
+				$this->unModule = new ModuleRetour();
+				break;
+				
+				case "Emprunt" :				
+				$this->unModule = new ModuleEmprunt();
+				break;
+				
+				case "GestionEmprunt" :				
+				$this->unModule = new ModuleGestionEmprunt();
+				break;
 			}
 		}
 		else
@@ -139,6 +159,8 @@ class PageModule extends Page
                 }
 		$this->ajouteLigne("<li><a href=\"" . RACINE_SITE . "\">Retour Accueil</a></li>");	
 		$this->ajouteLigne("<li><a href=\"" . MODULE_RECHERCHE . "\">Recherche</a></li>");
+		$this->ajouteLigne("<li><a href=\"" . MODULE_EMPRUNTER . "\">Emprunter
+		</a></li>");
 		$this->fermeBloc("</ol>");
 		$this->fermeBloc("</nav>");
 	}
